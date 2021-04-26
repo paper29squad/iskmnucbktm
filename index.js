@@ -59,4 +59,4 @@ workflow_data.totalamount = document.getElementsByXPath('//*[@id="content-wrappe
 //入金口座
 workflow_data.paymentaccount = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[18]/td/table/tbody/tr/td')[0].innerText
 
-Object.keys(workflow).forEach(key => console.log('key:' + key + ' value:' + workflow[key]));
+Object.keys(workflow_data).forEach(key => console.log('key:' + key + ' value:' + workflow_data[key]));
