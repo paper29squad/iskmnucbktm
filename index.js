@@ -22,18 +22,18 @@ workflow_data.person = document.getElementsByXPath('//*[@id="content-wrapper"]/d
 workflow_data.baseuri = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[1]/td/div/div/text()')[0].baseURI
 
 //売上計上有無
-let sales = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[4]/td/table/tbody/tr/td/text()')[0]
+let sales = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[4]/td/table/tbody/tr/td/text()')[0].innerText
 sele = sales.textContent.trim();
 workflow_data.sales = sales
 //請求書発行有無
-workflow_data.invoice = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[5]/td/table/tbody/tr/td/text()')[0]
+workflow_data.invoice = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[5]/td/table/tbody/tr/td/text()')[0].innerText
 
 //売上計上日
 workflow_data.salesdate = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[6]/td/table/tbody/tr/td')[0].innerText
 //入金予定日
 workflow_data.paymentdate = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[7]/td/table/tbody/tr/td')[0].innerText
 //相手方会社名
-workflow_data.customercompanyname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[8]/td/table/tbody/tr/td/text()')[2]
+workflow_data.customercompanyname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[8]/td/table/tbody/tr/td/text()')[2].innerText
 //相手方部署名
 workflow_data.customerdivisionname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[9]/td/table/tbody/tr/td')[0].innerText
 //相手方役職名
