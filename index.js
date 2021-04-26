@@ -25,7 +25,7 @@ workflow_data.baseuri = document.getElementsByXPath('//*[@id="content-wrapper"]/
 workflow_data.sales = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[4]/td/table/tbody/tr/td/text()')[0].textContent.trim()
 
 //請求書発行有無
-workflow_data.invoice = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[5]/td/table/tbody/tr/td/text()')[0].innerText
+workflow_data.invoice = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[5]/td/table/tbody/tr/td/text()')[0].textContent.trim()
 
 //売上計上日
 workflow_data.salesdate = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[6]/td/table/tbody/tr/td')[0].innerText
