@@ -32,9 +32,9 @@ workflow_data.salesdate = document.getElementsByXPath('//*[@id="content-wrapper"
 //入金予定日
 workflow_data.paymentdate = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[7]/td/table/tbody/tr/td')[0].innerText
 //相手方会社名
-workflow_data.customercompany-name = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[8]/td/table/tbody/tr/td/text()')[2]
+workflow_data.customercompanyname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[8]/td/table/tbody/tr/td/text()')[2]
 //相手方部署名
-workflow_data.customerdivision-name = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[9]/td/table/tbody/tr/td')[0].innerText
+workflow_data.customerdivisionname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[9]/td/table/tbody/tr/td')[0].innerText
 //相手方役職名
 workflow_data.customertitle = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[11]/td/table/tbody/tr/td')[0].firstChild.nodevalue
 //相手方担当名（敬称不要）
