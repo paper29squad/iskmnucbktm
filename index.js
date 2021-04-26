@@ -37,7 +37,7 @@ workflow_data.customercompanyname = document.getElementsByXPath('//*[@id="conten
 //相手方部署名
 workflow_data.customerdivisionname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[9]/td/table/tbody/tr/td')[0].innerText
 //相手方役職名
-workflow_data.customertitle = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[11]/td/table/tbody/tr/td')[0].firstChild
+workflow_data.customertitle = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[10]/td/table/tbody/tr/td')[0].firstChild
 workflow_data.customertitle = workflow_data.customertitle.textContent.trim()
 //相手方担当名（敬称不要）
 workflow_data.customerincharge = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[11]/td/table/tbody/tr/td')[0].firstChild
