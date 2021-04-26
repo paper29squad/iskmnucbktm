@@ -11,18 +11,19 @@ workflow_data = {}
 
 //サイボウズワークフロー番号
 let application_number = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[1]/td/div/div/text()')[1];
-workflow_data.no = application_number .nodeValue.replace('No. ', "").trim();
+workflow_data.no = application_number.nodeValue.replace('No. ', "").trim();
 
 //表題
 workflow_data.title = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[1]/td/div/div/font/b')[0].innerText
 
 //申請者
-workflow_data.person = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[1]/td/a')[0].firstChild
+workflow_data.person = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[1]/td/a')[0].firstChild.nodeValue
 //BaseURI
 workflow_data.baseuri = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[1]/td/div/div/text()')[0].baseURI
 
 //売上計上有無
 let sales = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[4]/td/table/tbody/tr/td/text()')[0]
+sele = sales.textContent.trim();
 workflow_data.sales = sales
 //請求書発行有無
 workflow_data.invoice = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[5]/td/table/tbody/tr/td/text()')[0]
@@ -36,9 +37,11 @@ workflow_data.customercompanyname = document.getElementsByXPath('//*[@id="conten
 //相手方部署名
 workflow_data.customerdivisionname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[9]/td/table/tbody/tr/td')[0].innerText
 //相手方役職名
-workflow_data.customertitle = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[11]/td/table/tbody/tr/td')[0].firstChild.nodevalue
+workflow_data.customertitle = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[11]/td/table/tbody/tr/td')[0].firstChild
+workflow_data.customertitle = workflow_data.customertitle.textContent.trim()
 //相手方担当名（敬称不要）
-workflow_data.customerincharge = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[11]/td/table/tbody/tr/td')[0].firstChild.nodevalue
+workflow_data.customerincharge = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[11]/td/table/tbody/tr/td')[0].firstChild
+workflow_data.customerincharge = workflow_data.customerincharge.textContent.trim()
 //品名1：売上（税込）
 workflow_data.sales1 = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[12]/td/table/tbody/tr/td')[0].innerText
 //品名2：売上（税込）
