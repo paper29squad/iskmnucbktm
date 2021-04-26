@@ -33,7 +33,7 @@ workflow_data.salesdate = document.getElementsByXPath('//*[@id="content-wrapper"
 workflow_data.paymentdate = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[7]/td/table/tbody/tr/td')[0].innerText
 //相手方会社名
 workflow_data.customercompanyname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[8]/td/table/tbody/tr/td/text()')[2].textContent
-workflow_data.customercompanyname = workflow_data.customercompanyname.textContent.trim()
+workflow_data.customercompanyname = workflow_data.customercompanyname.trim()
 //相手方部署名
 workflow_data.customerdivisionname = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[9]/td/table/tbody/tr/td')[0].innerText
 //相手方役職名
