@@ -8,5 +8,5 @@ document.getElementsByXPath = function(expression, parentElement) {
 }
 
 //サイボウズワークフロー番号
-let number = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[1]/td/div/div/text()')[1]
-number.nodeValue.replace('No. ', "").trim()
+let number = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[1]/td/div/div/text()')[1];
+alert(number.nodeValue.replace('No. ', "").trim())
