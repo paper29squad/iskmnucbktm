@@ -11,7 +11,7 @@ workflow_data = {}
 
 //サイボウズワークフロー番号
 let number = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[1]/td/div/div/text()')[1];
-workflow_data.number = number.nodeValue.replace('No. ', "").trim();
+workflow_data.no = number.nodeValue.replace('No. ', "").trim();
 
 //表題
 workflow_data.title = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[1]/td/div/div/font/b')[0].innerText
