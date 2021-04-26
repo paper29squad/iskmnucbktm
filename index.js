@@ -23,7 +23,6 @@ workflow_data.baseuri = document.getElementsByXPath('//*[@id="content-wrapper"]/
 
 //売上計上有無
 let sales = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[4]/td/table/tbody/tr/td/text()')[0].innerText
-sele = sales.textContent.trim();
 workflow_data.sales = sales
 //請求書発行有無
 workflow_data.invoice = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[5]/td/table/tbody/tr/td/text()')[0].innerText
