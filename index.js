@@ -62,8 +62,9 @@ workflow_data.totalamount = document.getElementsByXPath('//*[@id="content-wrappe
 //入金口座
 workflow_data.paymentaccount = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[18]/td/table/tbody/tr/td')[0].innerText
 
+let to_kintone = "";
 for (let key in workflow_data) {
-   to_kintone = to_kintone  + 'key:' + key + ' value:' + hash[key];
+   to_kintone = to_kintone  '\n' + 'key:' + key + ' value:' + hash[key];
 }
 let to_kintone = workflow_data;
 e = document.createElement('textarea');
