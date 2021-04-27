@@ -64,11 +64,8 @@ workflow_data.paymentaccount = document.getElementsByXPath('//*[@id="content-wra
 
 Object.keys(workflow_data).forEach(key => console.log('key:' + key + ' value:' + workflow_data[key]));
 
-const textAreaElement = document.createElement("textarea");
-textAreaElement.textContent = Object.keys(workflow_data).forEach(key => 'key:' + key + ' value:' + workflow_data[key]);
-
 e = document.createElement('textarea');
-e.textContent = document.title + '\r' + document.URL;
+e.textContent = Object.keys(workflow_data).forEach(key => 'key:' + key + ' value:' + workflow_data[key]);
 document.body.appendChild(e);
 e.select();
 document.execCommand('copy');
