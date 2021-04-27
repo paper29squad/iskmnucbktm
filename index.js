@@ -64,12 +64,16 @@ workflow_data.paymentaccount = document.getElementsByXPath('//*[@id="content-wra
 
 Object.keys(workflow_data).forEach(key => console.log('key:' + key + ' value:' + workflow_data[key]));
 
-var tmp = document.createElement('p');
-var pre = document.createElement('p');
-pre.style.userSelect = 'auto';
-tmp.appendChild(pre).textContent = Object.keys(workflow_data).forEach(key => 'key:' + key + ' value:' + workflow_data[key]);;
-document.body.appendChild(tmp);
-document.getSelection().selectAllChildren(tmp);
-document.execCommand('copy');
+const textAreaElement = document.createElement("textarea");
+textAreaElement.textContent = Object.keys(workflow_data).forEach(key => 'key:' + key + ' value:' + workflow_data[key]);
+
+const bodyElement = document.getElementsByTagName("body")[0];
+bodyElement.appendChild(textAreaElement);
+textAreaElement.select();
+
+const isSuccessCopy = document.execCommand('copy');
+bodyElement.removeChild(textAreaElement);
+console.log("Copy successful? = " + isSuccessCopy)
+
 console.log('let me know')
 
