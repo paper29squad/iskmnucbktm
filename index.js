@@ -67,13 +67,12 @@ Object.keys(workflow_data).forEach(key => console.log('key:' + key + ' value:' +
 const textAreaElement = document.createElement("textarea");
 textAreaElement.textContent = Object.keys(workflow_data).forEach(key => 'key:' + key + ' value:' + workflow_data[key]);
 
-const bodyElement = document.getElementsByTagName("body")[0];
-bodyElement.appendChild(textAreaElement);
-textAreaElement.select();
-
-const isSuccessCopy = document.execCommand('copy');
-bodyElement.removeChild(textAreaElement);
-console.log("Copy successful? = " + isSuccessCopy)
+e = document.createElement('textarea');
+e.textContent = document.title + '\r' + document.URL;
+document.body.appendChild(e);
+e.select();
+document.execCommand('copy');
+e.remove();
 
 console.log('let me know')
 
