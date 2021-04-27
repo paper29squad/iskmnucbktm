@@ -62,4 +62,12 @@ workflow_data.totalamount = document.getElementsByXPath('//*[@id="content-wrappe
 //入金口座
 workflow_data.paymentaccount = document.getElementsByXPath('//*[@id="content-wrapper"]/div[4]/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div/table[1]/tbody/tr[18]/td/table/tbody/tr/td')[0].innerText
 
-Object.keys(workflow_data).forEach(key => console.log('key:' + key + ' value:' + workflow_data[key]));
+//Object.keys(workflow_data).forEach(key => console.log('key:' + key + ' value:' + workflow_data[key]));
+
+var tmp = document.createElement('p');
+var pre = document.createElement('p');
+pre.style.userSelect = 'auto';
+tmp.appendChild(pre).textContent = Object.keys(workflow_data).forEach(key => 'key:' + key + ' value:' + workflow_data[key]);;
+document.body.appendChild(tmp);
+document.getSelection().selectAllChildren(tmp);
+document.execCommand('copy');
