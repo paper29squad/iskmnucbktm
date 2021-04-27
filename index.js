@@ -71,3 +71,5 @@ tmp.appendChild(pre).textContent = Object.keys(workflow_data).forEach(key => 'ke
 document.body.appendChild(tmp);
 document.getSelection().selectAllChildren(tmp);
 document.execCommand('copy');
+console.log('let me know')
+
