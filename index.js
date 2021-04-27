@@ -64,7 +64,7 @@ workflow_data.paymentaccount = document.getElementsByXPath('//*[@id="content-wra
 
 let to_kintone = "";
 for (let key in workflow_data) {
-   to_kintone = to_kintone + 'key:' + key + ' value:' + hash[key];
+   to_kintone = to_kintone + 'key:' + key + ' value:' + workflow_data[key];
 }
 e = document.createElement('textarea');
 e.textContent = to_kintone;
