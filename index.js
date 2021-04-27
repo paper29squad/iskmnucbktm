@@ -66,7 +66,6 @@ let to_kintone = "";
 for (let key in workflow_data) {
    to_kintone = to_kintone + 'key:' + key + ' value:' + hash[key];
 }
-let to_kintone = workflow_data;
 e = document.createElement('textarea');
 e.textContent = to_kintone;
 document.body.appendChild(e);
